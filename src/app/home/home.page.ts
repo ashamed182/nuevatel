@@ -27,27 +27,13 @@ export class HomePage implements OnInit {
   }
 
   public loadingEvent(e) {
-    const proto  = 'https:';
-    const node   = document.createElement('script');
-    node.type  = 'text/javascript';
-    node.async = true;
-    node.src   =  'https://webchat-nuevatel.i6.inconcertcc.com/v3/click_to_chat?token=2AD03E30195D6240943B84B2EBFD3B25';
-    const s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(node, s);
-    console.log('snippet from external js chat soporte');
-    console.log(document.getElementById('MD_Chat_VivaApp_Login_Button'), 'button');
-    this.handleRefresh(e);
-  }
-
-  public snippetEvent() {
     const proto  = document.location.protocol || 'http:';
     const node   = document.createElement('script');
     node.type  = 'text/javascript';
     node.async = true;
-    node.src   =  'https://webchat-nuevatel.i6.inconcertcc.com/v3/click_to_chat?token=2F9EB9E574A15EED9D1BCA755D898376';
+    node.src   = 'https://webchat-nuevatel.i6.inconcertcc.com/v3/click_to_chat?token=9A9D0B61F842C5093CBFC0E6AFBC56FA';
     const s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(node, s);
-    console.log('snippet from external js sin button');
   }
 
   handleRefresh(event) {
