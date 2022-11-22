@@ -6,12 +6,14 @@
 
 <ion-content>
   <ion-button [routerLink]="['/']">ir atras</ion-button>
-  <ion-button id="MD_Chat_VivaApp_Login_Button" (click)="loadingEvent($event)">
+  <ion-button [id]="id" (click)="loadingEvent($event)">
     chats
+  </ion-button>
+  <ion-button (click)="snippetEvent()">
+    snippet
   </ion-button>
   <br />
     <div *ngIf="show">
       <ion-spinner class="spinner-loading" ></ion-spinner>
     </div>
-
 </ion-content>

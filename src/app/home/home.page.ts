@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
+import { _ID } from './../app.module';
 
 @Component({
   selector: 'app-home',
@@ -16,16 +17,37 @@ export class HomePage implements OnInit {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
   show = false;
+  id: string;
   constructor(private httpClient: HttpClient) {
   }
 
   ngOnInit() {
+    this.id = _ID;
+    console.log(this.id, 'id app');
   }
 
-  loadingEvent(e) {
-    // eslint-disable-next-line no-debugger
-    debugger;
+  public loadingEvent(e) {
+    const proto  = 'https:';
+    const node   = document.createElement('script');
+    node.type  = 'text/javascript';
+    node.async = true;
+    node.src   =  'https://webchat-nuevatel.i6.inconcertcc.com/v3/click_to_chat?token=2AD03E30195D6240943B84B2EBFD3B25';
+    const s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(node, s);
+    console.log('snippet from external js chat soporte');
+    console.log(document.getElementById('MD_Chat_VivaApp_Login_Button'), 'button');
     this.handleRefresh(e);
+  }
+
+  public snippetEvent() {
+    const proto  = document.location.protocol || 'http:';
+    const node   = document.createElement('script');
+    node.type  = 'text/javascript';
+    node.async = true;
+    node.src   =  'https://webchat-nuevatel.i6.inconcertcc.com/v3/click_to_chat?token=2F9EB9E574A15EED9D1BCA755D898376';
+    const s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(node, s);
+    console.log('snippet from external js sin button');
   }
 
   handleRefresh(event) {
