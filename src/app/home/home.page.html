@@ -6,9 +6,12 @@
 
 <ion-content>
   <ion-button [routerLink]="['/']">ir atras</ion-button>
-  <ion-button [id]="id" (click)="loadingEvent($event)">
-    chats
-  </ion-button>
+  <div (click)="loadingEvent($event)">
+    <ion-button [id]="id">
+      chats
+    </ion-button>
+  </div>
+
   <br />
     <div *ngIf="show">
       <ion-spinner class="spinner-loading" ></ion-spinner>
