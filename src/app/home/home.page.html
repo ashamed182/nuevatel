@@ -11,6 +11,16 @@
       chats
     </ion-button>
   </div>
+  <div (click)="loadingEvent2($event)">
+    <ion-button [id]="id">
+      chats2
+    </ion-button>
+  </div>
+  <div (click)="loadingEvent3($event)">
+    <ion-button [id]="id">
+      chats3
+    </ion-button>
+  </div>
 
   <br />
     <div *ngIf="show">

@@ -36,6 +36,26 @@ export class HomePage implements OnInit {
     s.parentNode.insertBefore(node, s);
   }
 
+  public loadingEvent2(e) {
+    const proto  = document.location.protocol || 'http:';
+    const node   = document.createElement('script');
+    node.type  = 'text/javascript';
+    node.async = true;
+    node.src   = 'https://webchat-soporte.i6.inconcertcc.com/v3/click_to_chat?token=AB5616946B9C4FA63D1383B180432247';
+    const s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(node, s);
+  }
+
+  public loadingEvent3(e) {
+    const proto  = document.location.protocol || 'http:';
+    const node   = document.createElement('script');
+    node.type  = 'text/javascript';
+    node.async = true;
+    node.src   = 'https://webchat-nuevatel.i6.inconcertcc.com/v3/click_to_chat?token=2AD03E30195D6240943B84B2EBFD3B25';
+    const s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(node, s);
+  }
+
   handleRefresh(event) {
       if (event) {
         this.show = true;
